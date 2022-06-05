@@ -3,6 +3,24 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 340px;
+    height: 290px;
+    top: 230px;
+    align-items: center;
+    left: 50px;
     z-index: 3;
+    &__divider{
+        width: 2px;
+        height: 70px;
+        background-color: #000;
+    }
+    &__text{
+        width: 24px;
+        height: 100px;
+        span{
+            display: block;
+            transform: rotate(-90deg) translate(-30%,-160%);
+            width: 100px;
+        }
+        
+    }
 }
