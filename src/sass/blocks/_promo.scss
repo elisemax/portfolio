@@ -22,4 +22,10 @@
             color:#000000;
         }
     }
+    &__subtitle{
+        position: relative;
+        padding-left: 10px;
+        @include before_circle;
+        z-index: 2;
+    }
 }
