@@ -15,11 +15,11 @@
         width: 250px;
     }
     &__link{
-        color: #fff;
+        color: #000;
         text-decoration: none;
         font-weight: bold;
         &:hover{
-            color:#fff;
+            color:red;
         }
     }
     &__subtitle{
@@ -28,5 +28,7 @@
         @include before_circle;
         z-index: 2;
     }
-
+    &__white{
+        color:#fff;
+    }
 }
