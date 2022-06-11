@@ -496,19 +496,23 @@
                     <div class="title title__fz14 contacts__text">Or leave your details and I will write to you:</div>
                     <form action="#" class="contacts__form">
                         <div class="contacts__input">
-                            <input name="name" id="name" type="text">
+                            <input required name="name" id="name" type="text">
                             <label for="name">Your name</label>
                         </div>
                         <div class="contacts__input">
-                            <input name="email" id="email" type="email">
+                            <input required name="email" id="email" type="email">
                             <label for="email">Your e-mail</label>
                         </div>
                         <div class="contacts__textarea">
                                 <textarea name="text" id="text" cols="30" rows="10"></textarea>
                                 <label for="text">Your message</label>
                         </div>
-                        <div>
+                        <div class="contacts__triggers">
                             <button class="contacts__btn btn">Send a message</button>
+                            <div class="contacts__policy">
+                                <input required type="checkbox">
+                                <span>I Agree to <a href="/policy.html">Privacy Policy</a></span>
+                            </div>
                         </div>
                     </form>
                 </div>
