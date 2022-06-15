@@ -9,6 +9,7 @@
     left: 50px;
     z-index: 3;
     color:#fff;
+
     &__divider{
         width: 2px;
         height: 70px;
@@ -25,10 +26,25 @@
         }
     }
     &__link{
+        svg path{
+            fill: #fff;
+        }
         &:hover{
             svg path{
                 fill:$main-color;
             }
         }
+    }
+    &__blackLink{
+        color:#000;
+        svg path{
+            fill: #000;
+        }
+    }
+    &__blackDivider{
+        background-color: #000;
+    }
+    &__blackText{
+        color:#000;
     }
 }
