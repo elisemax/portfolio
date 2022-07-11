@@ -57,7 +57,7 @@ async function getResources (url){
 function tryPostData(formIn) {
     formIn.addEventListener('submit',(e)=>{
         e.preventDefault();
-        const formData = new FormData(form);
+        const formData = new FormData(formIn);
         const json = JSON.stringify(Object.fromEntries(formData.entries()));
         console.log(json);
         postData('https://rock-skyline-355707.oa.r.appspot.com/cv/max',json).then(data=>{
