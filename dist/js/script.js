@@ -32,4 +32,42 @@ window.onscroll = function(){
         sidePanelDivider.classList.remove('sidepanel__blackDivider');
     }
 }
+// Submit
+const btnForm = document.querySelector('.contacts__btn btn'),
+        form = document.querySelector('.contacts__form');
+
+const postData = async (url, data) =>{
+    const res = await fetch(url, {
+        method:"POST",
+        headers:{
+            'Content-type':'application/json'},
+        body: data
+    });
+    return await res.json();
+};
+async function getResources (url){
+    const res = await fetch(url);
+
+    if (!res.ok) {
+        throw new Error(`Coud not fetch ${url}, status: ${res.status}`);
+    }
+
+    return await res.json();
+};
+function tryPostData(formIn) {
+    formIn.addEventListener('submit',(e)=>{
+        e.preventDefault();
+        const formData = new FormData(form);
+        const json = JSON.stringify(Object.fromEntries(formData.entries()));
+        postData('https://rock-skyline-355707.oa.r.appspot.com/cv/max',json).then(data=>{
+            console.log(data);
+        }).catch(()=>{
+            console.log('fail');
+        }).finally(()=>{
+            form.reset();
+        });
+    });
+}
+tryPostData(form);
+
 
