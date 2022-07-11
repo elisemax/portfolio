@@ -59,6 +59,7 @@ function tryPostData(formIn) {
         e.preventDefault();
         const formData = new FormData(form);
         const json = JSON.stringify(Object.fromEntries(formData.entries()));
+        console.log(json);
         postData('https://rock-skyline-355707.oa.r.appspot.com/cv/max',json).then(data=>{
             console.log(data);
         }).catch(()=>{
