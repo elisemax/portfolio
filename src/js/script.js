@@ -43,7 +43,7 @@ const postData = async (url, data) =>{
             'Content-type':'application/json'},
         body: data
     });
-    return await res.json();
+    return await res;
 };
 async function getResources (url){
     const res = await fetch(url);
