@@ -60,7 +60,7 @@ function tryPostData(formIn) {
         const formData = new FormData(formIn);
         const json = JSON.stringify(Object.fromEntries(formData.entries()));
         console.log(json);
-        postData('https://rock-skyline-355707.oa.r.appspot.com/cv/mail',json).then(data=>{
+        postData('http://localhost:3000/requests',json).then(data=>{
             console.log(data);
         }).catch(()=>{
             console.log('fail');
